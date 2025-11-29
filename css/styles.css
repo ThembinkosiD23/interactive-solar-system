@@ -75,3 +75,17 @@ body {
     transform: translateY(-50%);
     border-radius: 50%;
 }
+/*---------------------Mars---------------------*/
+.mars-orbit {
+    width: 550px;
+    height: 550px;
+}
+
+.mars {
+    width: 27px;
+    height: 27px;
+    background: rgb(255, 0, 0); /* Venus golden brown */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
