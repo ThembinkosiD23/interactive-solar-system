@@ -59,3 +59,19 @@ body {
     left: 0;
     transform: translateY(-50%);
 }
+/*-------------------EARTH-------------------*/
+.earth-orbit {
+    width: 450px;
+    height: 450px;
+}
+
+.earth {
+    width: 35px;
+    height: 35px;
+    background: rgb(70, 130, 180); /* Earth blue */
+    border: 3px solid white;       /* atmosphere effect */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
