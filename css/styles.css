@@ -44,3 +44,18 @@ body {
     left: 0;
     transform: translateY(-50%);
 }
+
+/*------venus------------*/
+.venus-orbit {
+    width: 350px;
+    height: 350px;
+}
+
+.venus {
+    width: 30px;
+    height: 30px;
+    background: rgb(206, 130, 43); /* Venus golden brown */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
