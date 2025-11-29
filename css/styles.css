@@ -19,3 +19,28 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 40px #ffcc00;
 }
+/*--------------------------------------------------------------------------------------*/
+.orbit {
+    position: absolute;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.mercury-orbit {
+    width: 250px;
+    height: 250px;
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mercury {
+    width: 20px;
+    height: 20px;
+    background: gray;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
