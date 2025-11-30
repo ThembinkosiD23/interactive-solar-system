@@ -84,7 +84,7 @@ body {
 .mars {
     width: 27px;
     height: 27px;
-    background: rgb(255, 0, 0); /* Venus golden brown */
+    background: rgb(216, 75, 32); /* mars reddish*/
     top: 50%;
     left: 0;
     transform: translateY(-50%);
