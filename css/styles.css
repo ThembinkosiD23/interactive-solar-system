@@ -105,3 +105,32 @@ body {
     left: 0;
     transform: translateY(-50%);
 }
+/*------------------Saturn-------------------------*/
+.saturn-orbit {
+    width: 850px;
+    height: 850px;
+}
+
+.saturn {
+    width: 55px;
+    height: 55px;
+    background: rgb(210, 180, 140); /* Saturn pale gold */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* Saturn Rings */
+.saturn .rings {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    border: 3px solid rgba(200, 180, 150, 0.8);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+}
+
