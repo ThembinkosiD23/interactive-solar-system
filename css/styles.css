@@ -1,7 +1,13 @@
 body {
+    background-color: #090626;
     margin: 0;
     padding: 0;
-    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
 .space {
@@ -10,152 +16,172 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .sun {
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, #ffff66, #ffcc00, #ff9900);
+    width: 80px;
+    height: 80px;
+    background-color: rgb(255, 209, 4);
     border-radius: 50%;
-    box-shadow: 0 0 40px #ffcc00;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 0 50px rgba(255, 200, 0, 0.8);
 }
-/*--------------------------------------------------------------------------------------*/
+
+/* ---------------- ORBITS ----------------- */
+
 .orbit {
+    border: 1px dotted rgb(255, 255, 255);
     position: absolute;
-    border: 1px dashed rgba(255, 255, 255, 0.3);
     border-radius: 50%;
+    animation: orbit linear infinite;
 }
 
+/* Mercury */
 .mercury-orbit {
-    width: 250px;
-    height: 250px;
-}
-
-.planet {
-    position: absolute;
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation-duration: 8s;
 }
 
 .mercury {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background: gray;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-/*------venus------------*/
-.venus-orbit {
-    width: 350px;
-    height: 350px;
-}
-
-.venus {
-    width: 30px;
-    height: 30px;
-    background: rgb(206, 130, 43); /* Venus golden brown */
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-/*-------------------EARTH-------------------*/
-.earth-orbit {
-    width: 450px;
-    height: 450px;
-}
-
-.earth {
-    width: 35px;
-    height: 35px;
-    background: rgb(70, 130, 180); /* Earth blue */
-    border: 3px solid white;       /* atmosphere effect */
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    border-radius: 50%;
-}
-/*---------------------Mars---------------------*/
-.mars-orbit {
-    width: 550px;
-    height: 550px;
-}
-
-.mars {
-    width: 28px;
-    height: 28px;
-    background: rgb(216, 75, 32); /* mars reddish*/
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-/*-------------Jupiter------------------------*/
-.jupiter-orbit {
-    width: 700px;
-    height: 700px;
-}
-
-.jupiter {
-    width: 60px;
-    height: 60px;
-    background: rgb(227, 150, 89); /* Jupiter brown-orange */
-    border-radius: 50%;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-/*------------------Saturn-------------------------*/
-.saturn-orbit {
-    width: 850px;
-    height: 850px;
-}
-
-.saturn {
-    width: 55px;
-    height: 55px;
-    background: rgb(210, 180, 140); /* Saturn pale gold */
-    border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Venus */
+.venus-orbit {
+    width: 180px;
+    height: 180px;
+    animation-duration: 18s;
+}
+
+.venus {
+    width: 25px;
+    height: 25px;
+    background: rgb(206, 130, 43);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Earth */
+.earth-orbit {
+    width: 240px;
+    height: 240px;
+    animation-duration: 30s;
+}
+
+.earth {
+    width: 30px;
+    height: 30px;
+    background: rgb(70, 130, 180);
+    border: 3px solid white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Mars */
+.mars-orbit {
+    width: 300px;
+    height: 300px;
+    animation-duration: 55s;
+}
+
+.mars {
+    width: 23px;
+    height: 23px;
+    background: rgb(216, 75, 32);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Jupiter */
+.jupiter-orbit {
+    width: 360px;
+    height: 360px;
+    animation-duration: 120s;
+}
+
+.jupiter {
+    width: 50px;
+    height: 50px;
+    background: rgb(227, 150, 89);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Saturn */
+.saturn-orbit {
+    width: 420px;
+    height: 420px;
+    animation-duration: 150s;
+}
+
+.saturn {
+    width: 45px;
+    height: 45px;
+    background: rgb(210, 180, 140);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
     transform: translateY(-50%);
 }
 
 /* Saturn Rings */
 .saturn .rings {
     position: absolute;
-    width: 100px;
-    height: 30px;
-    border: 3px solid rgba(200, 180, 150, 0.8);
+    width: 80px;
+    height: 25px;
+    border: 2px solid rgba(200, 180, 150, 0.8);
     border-radius: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(20deg);
 }
 
-/*-----------Uranus--------------*/
+/* Uranus */
 .uranus-orbit {
-    width: 1000px;
-    height: 1000px;
+    width: 480px;
+    height: 480px;
+    animation-duration: 200s;
 }
 
 .uranus {
-    width: 45px;
-    height: 45px;
-    background: rgb(173, 216, 230); /* light blue */
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgb(173, 216, 230);
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%) rotate(90deg); /* Uranus rotates sideways */
+    border-radius: 50%;
+    transform: translateY(-50%) rotate(90deg);
 }
 
-/* Uranus Rings */
+/* Uranus rings */
 .uranus .uranus-rings {
     position: absolute;
-    width: 90px;
-    height: 20px;
+    width: 70px;
+    height: 18px;
     border: 2px solid rgba(200, 200, 200, 0.5);
     border-radius: 50%;
     top: 50%;
@@ -163,20 +189,30 @@ body {
     transform: translate(-50%, -50%) rotate(80deg);
 }
 
-/*---------------Neptune--------------------*/
+/* Neptune */
 .neptune-orbit {
-    width: 1150px;
-    height: 1150px;
+    width: 540px;
+    height: 540px;
+    animation-duration: 250s;
 }
 
 .neptune {
-    width: 40px;
-    height: 40px;
-    background: rgb(60, 100, 200); /* deep blue */
-    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    background: rgb(60, 100, 200);
     position: absolute;
     top: 50%;
     left: 0;
+    border-radius: 50%;
     transform: translateY(-50%);
 }
 
+/* Animation */
+@keyframes orbit {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
