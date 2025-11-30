@@ -82,9 +82,25 @@ body {
 }
 
 .mars {
-    width: 27px;
-    height: 27px;
+    width: 28px;
+    height: 28px;
     background: rgb(216, 75, 32); /* mars reddish*/
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/*-------------Jupiter------------------------*/
+.jupiter-orbit {
+    width: 700px;
+    height: 700px;
+}
+
+.jupiter {
+    width: 60px;
+    height: 60px;
+    background: rgb(227, 150, 89); /* Jupiter brown-orange */
+    border-radius: 50%;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
