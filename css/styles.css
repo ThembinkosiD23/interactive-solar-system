@@ -38,6 +38,27 @@ body {
   animation: orbit linear infinite;
 }
 
+/* --- PLANET CONTAINER (planet + label rotate together) --- */
+
+.planet-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  color: white;
+  font-size: 12px;
+  margin-top: 5px;
+  text-shadow: 0 0 3px black;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
 /* Mercury */
 .mercury-orbit {
   width: 120px;
@@ -48,12 +69,6 @@ body {
 .mercury {
   width: 15px;
   height: 15px;
-  background: gray;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-radius: 50%;
-  transform: translateY(-50%);
 }
 
 /* Venus */
@@ -66,12 +81,6 @@ body {
 .venus {
   width: 25px;
   height: 25px;
-  background: rgb(206, 130, 43);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-radius: 50%;
-  transform: translateY(-50%);
 }
 
 /* Earth */
@@ -84,13 +93,7 @@ body {
 .earth {
   width: 30px;
   height: 30px;
-  background: rgb(70, 130, 180);
   border: 3px solid white;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-radius: 50%;
-  transform: translateY(-50%);
 }
 
 /* Mars */
@@ -103,12 +106,6 @@ body {
 .mars {
   width: 23px;
   height: 23px;
-  background: rgb(216, 75, 32);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-radius: 50%;
-  transform: translateY(-50%);
 }
 
 /* Jupiter */
@@ -121,12 +118,6 @@ body {
 .jupiter {
   width: 50px;
   height: 50px;
-  background: rgb(227, 150, 89);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-radius: 50%;
-  transform: translateY(-50%);
 }
 
 /* Saturn */
@@ -139,11 +130,6 @@ body {
 .saturn {
   width: 45px;
   height: 45px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-radius: 50%;
-  transform: translateY(-50%);
 }
 
 /* Uranus */
@@ -156,15 +142,8 @@ body {
 .uranus {
   width: 40px;
   height: 40px;
-  background: rgb(173, 216, 230);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-radius: 50%;
-  transform: translateY(-50%) rotate(90deg);
 }
 
-/* Uranus rings */
 /* Neptune */
 .neptune-orbit {
   width: 540px;
@@ -175,12 +154,6 @@ body {
 .neptune {
   width: 37px;
   height: 37px;
-  background: rgb(60, 100, 200);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-radius: 50%;
-  transform: translateY(-50%);
 }
 
 /* Animation */
